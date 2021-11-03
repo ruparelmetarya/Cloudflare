@@ -38,14 +38,11 @@ const Posts = () => {
         <html>
         <body style={bodStyle}>
         <div>
-            <h1 style={{textAlign:'center'}}>Posts</h1>
+            <h1 style={{textAlign:'center'}}>Metarya's Page</h1>
             {posts.map((post) => (
                 <div style={divStyle} key={post.id}>
                     <h3>{post.title}</h3>
                     <p>{post.content}</p>
-                    <p>
-                        <em>Published {new Date(post.published_at).toLocaleString()}</em>
-                    </p>
                     <div style={{width: '30%'}}>
                         <div style={{width: "30%", height: "50px", float: "left"}}>
                             👍 {post.likes}
@@ -68,6 +65,10 @@ const Posts = () => {
                             <button> ❤️ Love </button>
                         </div>
                     </div>
+                    <p>
+                        Posted by: {post.username}
+                        Posted on: {new Date(post.published_at).toLocaleString()}
+                    </p>
                 </div>
             ))}
         </div>
