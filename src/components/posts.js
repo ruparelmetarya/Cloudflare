@@ -65,10 +65,15 @@ const Posts = () => {
                             <button> ❤️ Love </button>
                         </div>
                     </div>
-                    <p>
-                        Posted by: {post.username}
-                        Posted on: {new Date(post.published_at).toLocaleString()}
-                    </p>
+                    <div style={{width: '100%'}}>
+                        <div style={{width: "30%", height: "50px", float: "left"}}>
+                            Posted by: @{post.username}
+                        </div>
+                        <div style={{marginRight: "0%",height: "50px"}}>
+                            Posted on: {new Date(post.published_at).toLocaleString()}
+                        </div>
+                    </div>
+
                 </div>
             ))}
         </div>
